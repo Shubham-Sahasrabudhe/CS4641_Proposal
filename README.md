@@ -1,2 +1,2 @@
-# CS4641_Proposal: Team 8
+# Team 8
 
