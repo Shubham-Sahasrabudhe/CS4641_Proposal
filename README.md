@@ -1,2 +1,2 @@
-# CS4641_Proposal
-Repo hosting the Proposal's GitHub page
+# CS4641_Proposal: Team 8
+
