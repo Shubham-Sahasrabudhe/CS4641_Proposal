@@ -10,16 +10,17 @@
     <h2>Group members: Aayush, Gabriel, Mukund, Shubham, Tyler</h2>
     <section>
         <h2>Introduction:</h2>
-        <p>The stock market is becoming one of the most well-known and studied financial markets of the modern day. Despite its complexity and unpredictability, it has allowed people to create retirement funds, pensions, investment accounts, and several other accounts that help most people grow their overall wealth. While hedge funds often dominate the financial world, our goal is to help the everyday trader use machine learning to gain a helpful hand when it comes to trading on the more popular stocks.</p>
+        <p>The stock market is becoming one of the most well-known and studied financial markets of the modern day. Despite its complexity and unpredictability, it has allowed people to create retirement funds, pensions, and investment accounts amongst others that help grow their overall wealth. While hedge funds often dominate the financial world, our goal is to help the everyday trader through a machine learning assistant that provides insight when it comes to trading on the more popular stocks.</p>
     
         <h3>Literature Review:</h3>
         <p>Gabriel: Stock prices are often challenging to predict due to various factors such as the economy, a company's financial performance, and natural disasters. People can utilize techniques like neural networks and algorithms to help with the unpredictability. With data from places like Yahoo Finance and preprocessing the data, one can make successful machine learning algorithms to make accurate predictions.</p>
         <p>Aayush:</p>
         <p>Shubham: LSTM, CNN, DT, ANN, and SVM are most promising models for stock prediction. Accuracy, RMSE, MAPE, MSE, and MAE are some popularly used metrics.</p>
+        <p>Tyler:</p>
     
         <h3>Dataset Description:</h3>
-        <p>We gathered information from datasets in Kaggle, Yahoo Finance, and Bloomberg. Yahoo Finance is the most popular dataset for financial data [4]. We are going to look at some of the more popular stocks such as Apple, Amazon, Google, Microsoft, Nvidia, Tesla, Meta, Berkshire Hathaway, JPMorgan, and Disney. We will begin by analyzing the opening and closing prices to determine whether the price ended higher or lower than the market open for the day.</p>
-    
+        <p>We analyzed information from datasets in Kaggle, Yahoo Finance, and Bloomberg, with Yahoo Finance being the most popular dataset for financial data [4]. Through our analysis, we decided to use the Kaggle "Stock Market Dataset" which offers more than two decades of information on stocks and ETFs. The dataset includes the following content for each stock and ETF on a daily basis: date, opening price, closing price, lowest price, highest price, adjusted closing price, and trading volume.  To narrow the focus of our model, we analyze ten of the most prevalent and historic stocks: Apple, Amazon, Google, Microsoft, Nvidia, Tesla, Meta, Berkshire Hathaway, JPMorgan, and Disney.</p>
+
         <h3>Dataset links:</h3>
         <ol>
             <li>J. Crow, "Stock Market Dataset," Kaggle, 2021. [Online]. Available: https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset. [Accessed: 11-Jun-2024].</li>
@@ -29,7 +30,7 @@
     </section>
     <section>
         <h2>Problem/Motivation:</h2>
-        <p>The problem we are trying to solve is the difficulty of predicting financial markets. With financial institutions having more resources at their disposal, we aim to use machine learning algorithms to help everyday traders and day traders achieve their financial goals.</p>
+        <p>The problem we are trying to solve is the difficulty of predicting financial markets. With financial institutions having more resources at their disposal, we aim to use machine learning algorithms to help everyday traders achieve their financial goals. The objective of our model is to predict whether a stock will have a higher closing price compared to opening price on a given day, which we define as an uptick.</p>
     </section>
     <section>
         <h2>Methods:</h2>
@@ -44,18 +45,26 @@
         <h3>Models:</h3>
         <ol>
             <li>Linear Regression: Comparing variables.</li>
-            <li>Support Vector Machine (Supervised): Separating the data into different categories.</li>
-            <li>Neural Networks: Use Long Short Term Memory to find long term dependencies.</li>
+            <li>Support Vector Machine: Separating the data into different categories.</li>
+            <li>Neural Networks: Use Long Short Term Memory (LSTM) to find long term dependencies.</li>
         </ol>
     </section>
     <section>
         <h2>(Potential) Results and Discussion:</h2>
 
+        <h3>Labeling Predictions:</h3>
+        <ul>
+            <li>True Positive (TP): Model predicts an uptick. There is an uptick.</li>
+            <li>True Negative (TN): Model predicts no uptick. There is no uptick.</li>
+            <li>False Positive (FP): Model predicts an uptick. There is no uptick.</li>
+            <li>False Negative (FN): Model predicts no uptick. There is an uptick.</li>
+        </ul>
+
         <h3>Metrics:</h3>
         <ul>
-            <li>Accuracy (correct prediction / total predictions) - Prediction reliability</li>
-            <li>Precision (correct “uptick” prediction / total “uptick” prediction) - Measures true/false positives</li>
-            <li>Recall (correct “uptick” prediction / actual “uptick” predictions) - Ability to determine upticks</li>
+            <li>Accuracy: (TP + TN) / Total - Correctness</li>
+            <li>Precision: TP / (TP + FP) - Quality</li>
+            <li>Recall: TP / (TP + FN) - Completeness</li>
         </ul>
 
         <h3>Project Goals:</h3>
