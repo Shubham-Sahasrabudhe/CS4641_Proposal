@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS4641 Proposal</title>
+</head>
+<body>
+    <h1>CS4641 Proposal - Team 8</h1>
+    <h2>Group members: Aayush, Gabriel, Mukund, Shubham, Tyler</h2>
+    <section>
+        <h2>Introduction:</h2>
+        <p>The stock market is becoming one of the most well-known and studied financial markets of the modern day. Despite its complexity and unpredictability, it has allowed people to create retirement funds, pensions, and investment accounts amongst others that help grow their overall wealth. While hedge funds often dominate the financial world, our goal is to help the everyday trader through a machine learning assistant that provides insight when it comes to trading on the more popular stocks.</p>
+    
+        <h3>Literature Review:</h3>
+        <p>Machine learning models, such as regression and neural networks, "have shown promising results in predicting stock market movements by analyzing historical data patterns"[2]. Similarly, "our evaluated linear regression model demonstrated substantial accuracy in predicting financial stock market trends, proving the efficacy of machine learning techniques in financial forecasting" [1].</p>
+
+        <h3>Dataset Description:</h3>
+        <p>We analyzed information from datasets in Kaggle, Yahoo Finance, and Bloomberg, with Yahoo Finance being the most popular dataset for financial data [4]. Through our analysis, we decided to use the Kaggle "Stock Market Dataset" which offers more than two decades of information on stocks and ETFs. The dataset includes the following content for each stock and ETF on a daily basis: date, opening price, closing price, lowest price, highest price, adjusted closing price, and trading volume.  To narrow the focus of our model, we analyze ten of the most prevalent and historic stocks: Apple, Amazon, Google, Microsoft, Nvidia, Tesla, Meta, Berkshire Hathaway, JPMorgan, and Disney.</p>
+
+        <h3>Dataset links:</h3>
+        <ol>
+            <li>J. Crow, "Stock Market Dataset," Kaggle, 2021. [Online]. Available: https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset. [Accessed: 11-Jun-2024].</li>
+            <li>R. Roussi, "yfinance," GitHub, 2018. [Online]. Available: https://github.com/ranaroussi/yfinance. [Accessed: 11-Jun-2024].</li>
+            <li>"Bloomberg Terminal," Georgia Tech Library, 2024. [Online]. Available: https://www.library.gatech.edu/bloomberg. [Accessed: 11-Jun-2024].</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Problem/Motivation:</h2>
+        <p>The problem we are trying to solve is the difficulty of predicting financial markets. With financial institutions having more resources at their disposal, we aim to use machine learning algorithms to help everyday traders achieve their financial goals.</p>
+    </section>
+    <section>
+        <h2>Methods:</h2>
+
+        <h3>Data preprocessing:</h3>
+        <ol>
+            <li>Normalization: We are going to find the means, standard deviations, open/closing prices of the stocks we have chosen.</li>
+            <li>Principal Component Analysis: Use Singular value decomposition to define principal components within our datasets.</li>
+            <li>Cross Validation Sets: Break up our components into training and validations sets by using Kaggle and Yahoo Finance to compare wih the Bloomberg data.</li>
+        </ol>
+
+        <h3>Models:</h3>
+        <ol>
+            <li>Linear Regression: Comparing variables.</li>
+            <li>Support Vector Machine: Separating the data into different categories.</li>
+            <li>Neural Networks: Use Long Short Term Memory (LSTM) to find long term dependencies.</li>
+        </ol>
+    </section>
+    <section>
+        <h2>(Potential) Results and Discussion:</h2>
+
+        <h3>Labeling Predictions:</h3>
+        <ul>
+            <li>True Positive (TP): Model predicts an uptick. There is an uptick.</li>
+            <li>True Negative (TN): Model predicts no uptick. There is no uptick.</li>
+            <li>False Positive (FP): Model predicts an uptick. There is no uptick.</li>
+            <li>False Negative (FN): Model predicts no uptick. There is an uptick.</li>
+        </ul>
+
+        <h3>Metrics:</h3>
+        <ul>
+            <li>Accuracy: (TP + TN) / Total - Correctness</li>
+            <li>Precision: TP / (TP + FP) - Quality</li>
+            <li>Recall: TP / (TP + FN) - Completeness</li>
+        </ul>
+
+        <h3>Project Goals: </h3>
+        <p>The objective of our model is to predict whether a stock will have a higher closing price compared to opening price on a given day, which we define as an uptick. </p>
+        <h3>Expected Results:</h3>
+        <p> The Long Short Term Memory (LSTM) model is expected to have the most optimal predictions of the market. This is because LSTM networks "capture the context of the data as they are being trained and can address the gradient vanishing problem, making them the idea approach for time series forecasting [4]." The Linear Regression model is expected to have the least accuracy in accordance to our metrics as stock movements have a "non linear, dynamic and complex nature [3]" which cannot be robustly represnted by a simple regression model. Our prediction is backed by several tests as past surveys on papers indicate "it is evident that LSTM is the most preferred model among researchers for predicting stock price movements [5]." The SVM model is predicted to have a reasonable accuracy, but has some drawbacks related to the "selection of the kernel function parameters [...] and the value in the loss insensitive function [3]". </p>
+    </section>
+    <section>
+        <h2>References:</h2>
+        <p>[1] J. M. Sangeetha and K. J. Alfia, "Financial stock market forecast using evaluated linear regression based machine learning technique," Measurement: Sensors, vol. 31, p. 100950, Dec. 2023.</p>
+        <p>[2] Parmar, Ishita, et al. “Stock Market Prediction Using Machine Learning.” 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC), IEEE, 2018.</p>
+        <p>[3] L. Khaidem, S. Saha, and Dey, Sudeepa Roy, “Predicting the direction of stock market prices using random forest,” arXiv.org, 2016. https://arxiv.org/abs/1605.00003</p>
+        <p>[4] C. Y. Lin, J. A. L. Marques, "Stock market prediction using artificial intelligence: A systematic review of systematic reviews", Social Sciences & Humanities Open, Volume 9, 2024, 100864, ISSN 2590-2911. https://doi.org/10.1016/j.ssaho.2024.100864.</p>
+        <p>[5] Balasubramanian P, P C, Badarudeen S, Sriraman H. A systematic literature survey on recent trends in stock market prediction. PeerJ Comput Sci. 2024 Jan 31;10:e1700. doi: 10.7717/peerj-cs.1700. PMID: 38435546; PMCID: PMC10909160.</p>
+    </section>
+</body>
+</html>
