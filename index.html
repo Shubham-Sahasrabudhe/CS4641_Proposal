@@ -10,13 +10,13 @@
     <h2>Group members: Aayush, Gabriel, Mukund, Shubham, Tyler</h2>
     <section>
         <h2>Introduction:</h2>
-        <p>The stock market is becoming one of the most well-known and studied financial markets of the modern day. Despite its complexity and unpredictability, it has allowed people to create retirement funds, pensions, and investment accounts amongst others that help grow their overall wealth. While hedge funds often dominate the financial world, our goal is to help the everyday trader through a machine learning assistant that provides insight when it comes to trading on the more popular stocks.</p>
+        <p>The stock market is a well-known and studied financial market. Despite its complexity and unpredictability, it allows people to create retirement funds, pensions, and investment accounts to grow their wealth. While hedge funds dominate, our goal is to help everyday traders through machine learning algorithms that provide insight into trading popular stocks.</p>
     
         <h3>Literature Review:</h3>
         <p>Machine learning models, such as regression and neural networks, "have shown promising results in predicting stock market movements by analyzing historical data patterns"[2]. Similarly, "our evaluated linear regression model demonstrated substantial accuracy in predicting financial stock market trends, proving the efficacy of machine learning techniques in financial forecasting" [1].</p>
 
         <h3>Dataset Description:</h3>
-        <p>We analyzed information from datasets in Kaggle, Yahoo Finance, and Bloomberg, with Yahoo Finance being the most popular dataset for financial data [4]. Through our analysis, we decided to use the Kaggle "Stock Market Dataset" which offers more than two decades of information on stocks and ETFs. The dataset includes the following content for each stock and ETF on a daily basis: date, opening price, closing price, lowest price, highest price, adjusted closing price, and trading volume.  To narrow the focus of our model, we analyze ten of the most prevalent and historic stocks: Apple, Amazon, Google, Microsoft, Nvidia, Tesla, Meta, Berkshire Hathaway, JPMorgan, and Disney.</p>
+        <p>We analyzed datasets from Kaggle, Yahoo Finance, and Bloomberg, with Yahoo Finance being the most popular. We decided to use the Kaggle "Stock Market Dataset," which offers more than two decades of information. This dataset includes daily data on date, opening price, closing price, lowest price, highest price, adjusted closing price, and trading volume. We focused on ten prevalent stocks: Apple, Amazon, Google, Microsoft, Nvidia, Tesla, Meta, Berkshire Hathaway, JPMorgan, and Disney.</p>
 
         <h3>Dataset links:</h3>
         <ol>
@@ -27,23 +27,23 @@
     </section>
     <section>
         <h2>Problem/Motivation:</h2>
-        <p>The problem we are trying to solve is the difficulty of predicting financial markets. With financial institutions having more resources at their disposal, we aim to use machine learning algorithms to help everyday traders achieve their financial goals.</p>
+        <p>The problem is the difficulty of predicting financial markets. With financial institutions having more resources, we aim to use machine learning algorithms to help everyday traders compete.</p>
     </section>
     <section>
         <h2>Methods:</h2>
 
         <h3>Data preprocessing:</h3>
         <ol>
-            <li>Normalization: We are going to find the means, standard deviations, open/closing prices of the stocks we have chosen.</li>
-            <li>Principal Component Analysis: Use Singular value decomposition to define principal components within our datasets.</li>
-            <li>Cross Validation Sets: Break up our components into training and validations sets by using Kaggle and Yahoo Finance to compare wih the Bloomberg data.</li>
+            <li>Normalization: Calculate means, standard deviations, open/closing prices.</li>
+            <li>Principal Component Analysis: Use Singular Value Decomposition to define principal components.</li>
+            <li>Cross Validation Sets: Split data into training and validation sets, comparing Kaggle and Yahoo Finance with Bloomberg data.</li>
         </ol>
 
         <h3>Models:</h3>
         <ol>
             <li>Linear Regression: Comparing variables.</li>
-            <li>Support Vector Machine: Separating the data into different categories.</li>
-            <li>Neural Networks: Use Long Short Term Memory (LSTM) to find long term dependencies.</li>
+            <li>Support Vector Machine: Separating the data into categories.</li>
+            <li>Neural Networks: Use Long Short-Term Memory (LSTM) to find long-term dependencies.</li>
         </ol>
     </section>
     <section>
@@ -65,9 +65,9 @@
         </ul>
 
         <h3>Project Goals: </h3>
-        <p>The objective of our model is to predict whether a stock will have a higher closing price compared to opening price on a given day, which we define as an uptick. </p>
+        <p>The objective is to predict whether a stock will have a higher closing price compared to its opening price on a given day (an uptick).</p>
         <h3>Expected Results:</h3>
-        <p> The Long Short Term Memory (LSTM) model is expected to have the most optimal predictions of the market. This is because LSTM networks "capture the context of the data as they are being trained and can address the gradient vanishing problem, making them the idea approach for time series forecasting [4]." The Linear Regression model is expected to have the least accuracy in accordance to our metrics as stock movements have a "non linear, dynamic and complex nature [3]" which cannot be robustly represnted by a simple regression model. Our prediction is backed by several tests as past surveys on papers indicate "it is evident that LSTM is the most preferred model among researchers for predicting stock price movements [5]." The SVM model is predicted to have a reasonable accuracy, but has some drawbacks related to the "selection of the kernel function parameters [...] and the value in the loss insensitive function [3]". </p>
+        <p>The Long Short Term Memory (LSTM) model is expected to have the most optimal predictions of the market due to its ability to capture the context of the data and address the gradient vanishing problem. Our prediction is supported by past surveys indicating that "LSTM is the most preferred model among researchers for predicting stock price movements" [5]. In contrast, the Linear Regression model is expected to have the least accuracy since stock movements have a "non-linear, dynamic, and complex nature" [3] that cannot be robustly represented by a simple regression model. The SVM model is predicted to have reasonable accuracy but faces challenges related to the selection of kernel function parameters and the value in the loss-insensitive function.</p>
     </section>
     <section>
         <h2>References:</h2>
