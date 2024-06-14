@@ -27,7 +27,7 @@
     </section>
     <section>
         <h2>Problem/Motivation:</h2>
-        <p>The problem is the difficulty of predicting financial markets. With financial institutions having more resources, we aim to use machine learning algorithms to help everyday traders compete.</p>
+        <p>Financial markets are complex with significant time and knowledge required to predict successful investments. With financial institutions having more resources, we aim to use machine learning algorithms to help average individuals compete.</p>
     </section>
     <section>
         <h2>Methods:</h2>
@@ -41,9 +41,9 @@
 
         <h3>Models:</h3>
         <ol>
-            <li>Linear Regression: Comparing variables.</li>
-            <li>Support Vector Machine: Separating the data into categories.</li>
-            <li>Neural Networks: Use Long Short-Term Memory (LSTM) to find long-term dependencies.</li>
+            <li>Linear Regression: Models relationships between variables.</li>
+            <li>Support Vector Machine: Maximizes margin for classification.</li>
+            <li>Recurrent Neural Networks (Long Short-Term Memory Variation): Learns sequential data dependencies.</li>
         </ol>
     </section>
     <section>
@@ -52,23 +52,15 @@
         <h3>Project Goals: </h3>
         <p>The objective is to predict whether a stock will have a higher closing price compared to its opening price on a given day (an uptick).</p>
 
-        <h3>Labeling Predictions:</h3>
-        <ul>
-            <li>True Positive (TP): Model predicts an uptick. There is an uptick.</li>
-            <li>True Negative (TN): Model predicts no uptick. There is no uptick.</li>
-            <li>False Positive (FP): Model predicts an uptick. There is no uptick.</li>
-            <li>False Negative (FN): Model predicts no uptick. There is an uptick.</li>
-        </ul>
-
         <h3>Metrics:</h3>
         <ul>
-            <li>Accuracy: (TP + TN) / Total - Correctness</li>
-            <li>Precision: TP / (TP + FP) - Quality</li>
-            <li>Recall: TP / (TP + FN) - Completeness</li>
+            <li>Accuracy: Correctness</li>
+            <li>Precision: Quality</li>
+            <li>Recall: Completeness</li>
         </ul>
 
         <h3>Expected Results:</h3>
-        <p>The Long Short Term Memory (LSTM) Recurrent Neural Network (RNN) model is expected to have the most optimal predictions of the market due to its ability to capture the context of the data and address the gradient vanishing problem plaguing alternative variations. Our prediction is supported by past surveys indicating that "LSTM is the most preferred model among researchers for predicting stock price movements" [5]. In contrast, the Linear Regression model is expected to have the least accuracy since stock movements have a "non-linear, dynamic, and complex nature" [3] that cannot be robustly represented by a simple regression model. The SVM model is predicted to have reasonable accuracy but faces challenges related to the selection of kernel function parameters and the value in the loss-insensitive function.</p>
+        <p>The Long Short-Term Memory (LSTM) Recurrent Neural Network (RNN) model is expected to have the most best predictions of the market due to its ability to capture the context of the data and address the gradient vanishing problem plaguing alternative variations of RNNs. Our prediction is supported by past surveys indicating that "LSTM is the most preferred model among researchers for predicting stock price movements" [5]. In contrast, the Linear Regression model is expected to have the least accuracy since stock movements have a "non-linear, dynamic, and complex nature" [3] that cannot be robustly represented by a simple regression model. The SVM model is predicted to have reasonable accuracy but faces challenges related to the selection of kernel function parameters and the value in the loss-insensitive function.</p>
     </section>
     <section>
         <h2>References:</h2>
